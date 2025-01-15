@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  adminer:
+    image: dockette/adminer
+    ports:
+      - 8080:80  
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 5050:80
+    environment:
+       PGADMIN_DEFAULT_EMAIL: "thapa.sulav@cloco.net"
+       PGADMIN_DEFAULT_PASSWORD: "testuser1"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  pgadmin_data:
