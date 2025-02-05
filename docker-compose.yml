@@ -1,8 +1,4 @@
-services:
-  adminer:
-    image: dockette/adminer
-    ports:
-      - 8080:80  
+services:  
   pgadmin:
     image: dpage/pgadmin4
     ports:
